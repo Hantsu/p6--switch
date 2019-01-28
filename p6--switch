@@ -1,0 +1,60 @@
+/*
+Filename:	P6 - switch.cpp
+By:         Max T.
+Obejctive:	Demonstrate use of a switch structure 
+            to output the Roman numeral equivalent of an 
+            integer (range 0-19).*/
+
+#include <iostream>                                  // for cin, cout, endl
+using namespace std;                               //
+                                                 //    
+int main(void){                                //
+    int numberXroman;                        // dec var
+    int tens;                              // var for the tens
+    int ones;                            //
+    cin >> numberXroman;               // prompts for number, initializes var
+    tens = numberXroman/10;          //  gives div by 10 of input
+    ones = numberXroman%10;        //  gives modulus by 10 of input, for the ones
+    
+    switch (tens){ //switch1 code for tens
+        case 0:
+        cout << ""; break;
+        case 10:
+        cout << "X"; break;
+        case 20:
+        cout << "XX"; break;
+            
+        cout << tens;
+            
+        default: //default code tens
+            cout << "Error, please enter a number between 1-19.";
+    }
+    
+    switch (ones){
+        
+        case 1:
+            cout << "I"; break;
+        case 2:
+            cout << "II"; break;
+        case 3:
+            cout << "III"; break;
+        case 4:
+            cout << "IV"; break;
+        case 5:
+            cout << "V"; break;
+        case 6:
+            cout << "VI"; break;
+        case 7:
+            cout << "VII"; break;
+        case 8:
+            cout << "VIII"; break;
+        case 9:
+            cout << "IX"; break;
+            
+        cout << ones;
+            
+    default: //default code for any number not 1-19
+        cout << "Error!\nThe number you entered was not in the range of 0-19. Please try again with a number in that range.";
+    }
+        
+}
